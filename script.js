@@ -7,6 +7,10 @@ document.getElementById("searchbtn").addEventListener("click", function (event) 
     event.preventDefault();
     let inputel = document.getElementById("input").value
     var url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputel}&appid=${apiKey}`;
+    api(url)
+    
+});
+function api(url){
     fetch(url)
         .then(headers => headers.json())
         .then(weatherData => {
@@ -20,12 +24,20 @@ document.getElementById("searchbtn").addEventListener("click", function (event) 
             .then(weatherData =>{
             console.log(weatherData)
             document.getElementById("temperture").textContent = Math.floor(weatherData.current.temp*1.8-459.67);
+            let iconUrl = weatherData.current.weather[0].icon
+            let icon = `http://openweathermap.org/img/wn/${iconUrl}@2x.png`
             document.getElementById("conditons").textContent = weatherData.current.weather[0].description
+            document.getElementById("icon").src = icon
             document.getElementById("time").textContent = "1:00"
+            document.getElementById("UVindex").textContent = "UV Index "+weatherData.current.uvi;
+            document.getElementById("windspeed").textContent = "windseed "+weatherData.current.wind_speed
+            document.getElementById("humidity").textContent = "humidity" + weatherData.current.humidity + "%"
+            for (let i = 0; i < weatherData.daily.length; i++) {
+                console.log(i)
+                
+            }
             })
         })
-});
+}
 
-
-    
 
