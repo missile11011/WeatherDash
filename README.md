@@ -15,4 +15,4 @@ This web application was built using HTML, JavaScript, and CSS for styling. Also
 ## Contact
 Misael Reyes - misaelrey@gmail.com
 
-Portfolio Link: [https://missile11011.github.io/WeatherDash/](https://missile11011.github.io/WeatherDash/)
+Project Link: [https://missile11011.github.io/WeatherDash/](https://missile11011.github.io/WeatherDash/)
