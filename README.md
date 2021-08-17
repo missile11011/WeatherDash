@@ -1,5 +1,5 @@
 # Weather Dashboard
-![Portfolio screenshot](screenshot.png)
+![Portfolio screenshot](screenshot.PNG)
 ## About Project
 This is a weather dashboard web application that displays current forecast and daily forecast. Type in the city you want to check then press the search button. You will be presented with the city name temperature, weather conditions, wind speed, and humidity for the current daily weather. And additionally, the UV index for the current weather.
 
